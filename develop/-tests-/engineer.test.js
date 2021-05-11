@@ -43,6 +43,13 @@ describe(`Engineer`, () => {
         }).toThrow("Please enter a valid email!")
     })
 
+    //Tests if gitHub name is actually entered and not an empty string
+    it(`An error is thrown if gitHub is an empty string`, () => {
+        expect(() => {
+            new Engineer(1, "Jane Doe", "example@gmail.com", "");
+        }).toThrow("Please enter a valid gitHub user name!")
+    })
+
     //Tests if gitHub name is an actual string
     it(`An error is thrown if gitHub is not a string`, () => {
         expect(() => {
