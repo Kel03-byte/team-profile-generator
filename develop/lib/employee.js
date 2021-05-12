@@ -1,7 +1,7 @@
 class Employee {
 
     constructor(id, name, email, role) {
-        const validId = Number.isInteger(id) && id > 0;
+        const validId = Number(id) && id > 0;
         const validName = typeof name === "string" && name.length > 0;
         const validEmail = typeof email === "string" && email.length > 0;
         

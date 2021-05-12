@@ -5,7 +5,7 @@ class Engineer extends Employee {
     constructor(id, name, email, role, gitHub) {
         super(id, name, email, role);
 
-        const validGitHub = typeof gitHub === "string" && gitHub.length > 0;
+        const validGitHub =  typeof gitHub === 'string' && gitHub.length > 0;
         if (!validGitHub) {
             throw Error("Please enter a valid gitHub user name!")
         }
@@ -15,7 +15,7 @@ class Engineer extends Employee {
     }
 
     getGitHub() {
-        return "https://github.com/" + this.gitHub
+        return 'https://github.com/'+this.gitHub
     }
 
     getRole() {

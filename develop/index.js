@@ -3,7 +3,7 @@ const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 
-const employeeArray = []
+const employeeArray = [];
 
 const addEmployeeDetails = () => {
     return inquirer.prompt([
@@ -54,36 +54,37 @@ const addEmployeeDetails = () => {
             message: 'Would you like to add more team members?',
             default: false
         }
-    ]).then(employeeDetails => {
 
+    ])
+        .then(employeeDetails => {
 
-        let { id, name, email, role, officeNumber, github, school, addAnotherEmployee, } = employeeDetails;
-        let employee;
+            let { id, name, email, role, officeNumber, gitHub, school, addAnotherEmployee} = employeeDetails;
+            let employee;
 
-        if (role === "Engineer") {
-            employee = new Engineer(id, name, email, role, github);
+            if (role === "Engineer") {
+                employee = new Engineer(id, name, email, role, gitHub);
 
-            console.log(employee);
+                console.log(employee);
 
-        } else if (role === "Intern") {
-            employee = new Intern(id, name, email, role, school);
+            } else if (role === "Intern") {
+                employee = new Intern(id, name, email, role, school);
 
-            console.log(employee);
+                console.log(employee);
 
-        } else if (role === "Manager") {
-            employee = new Manager(id, name, email, role, officeNumber);
+            } else if (role === "Manager") {
+                employee = new Manager(id, name, email, role, officeNumber);
 
-            console.log(employee);
-        }
+                console.log(employee);
+            }
 
-        employeeArray.push(employee);
+            employeeArray.push(employee);
 
-        if (addAnotherEmployee) {
-            return addEmployeeDetails(employeeArray);
-        } else {
-            return employeeArray;
-        }
-    })
+            if (addAnotherEmployee) {
+                return addEmployeeDetails(employeeArray);
+            } else {
+                return employeeArray;
+            }
+        })
 }
 
 addEmployeeDetails()

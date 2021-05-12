@@ -4,7 +4,7 @@ class Manager extends Employee {
     constructor(id, name, email, role, officeNumber) {
         super(id, name, email, role);
 
-        const validOfficeNumber = Number.isInteger(officeNumber) && officeNumber > 0;
+        const validOfficeNumber = Number(officeNumber) && officeNumber > 0;
         if (!validOfficeNumber) {
             throw Error("Please enter a valid Office Number!")
         }

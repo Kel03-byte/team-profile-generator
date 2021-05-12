@@ -87,7 +87,7 @@ describe(`Engineer`, () => {
         expect(employee.getEmail()).toEqual("example@gmail.com");
     })
 
-    // Tests that the "getRole" function actually returns the role "Employee"
+    // Tests that the "getRole" function actually returns the role "Engineer"
     it(`When the getRole function is invoked it returns the role`, () => {
         const employee = new Engineer(1, 'Jane Doe', 'example@gmail.com', 'Engineer', 'jane-doe');
         expect(employee.getRole()).toEqual("Engineer");
