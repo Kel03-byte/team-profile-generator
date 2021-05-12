@@ -1,6 +1,6 @@
 class Employee {
 
-    constructor(id, name, email) {
+    constructor(id, name, email, role) {
         const validId = Number.isInteger(id) && id > 0;
         const validName = typeof name === "string" && name.length > 0;
         const validEmail = typeof email === "string" && email.length > 0;
@@ -16,10 +16,11 @@ class Employee {
         if (!validEmail) {
             throw Error("Please enter a valid email!")
         }
-
+        
         this.name = name;
         this.email = email;
         this.id = id;
+        this.role = role;
     };
 
     getName() {
