@@ -13,4 +13,4 @@ A screenshot of the Terminal in action and of the example Html page
 ## Usage
 Here is a short video on how to run the app!
 
-[Video Link!](https://drive.google.com/file/d//view?usp=sharing)
+[Video Link!](https://drive.google.com/file/d/1OkvsU1DWg3iC-ZQkG6C9NCBQ3yxv3U4s/view?usp=sharing)
