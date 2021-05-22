@@ -43,7 +43,7 @@ function createInternCard(intern) {
 <div class="card col-sm-10 col-md-5 col-lg-3 mr-2 mb-3 bg-light">
     <div class='card-header bg-primary text-light'>
         <h2>${intern.name}</h2>
-        <h2><i class="fas fa-user-graduate"> ${intern.role}</i></h2>
+        <h2><i class="fas fa-user-graduate"></i> ${intern.role}</h2>
     </div>
     <div class="card-body">
         <ul class="list-group list-group-flush">
